@@ -1,0 +1,17 @@
+{% extends '_partials/base.html' %}
+
+{% load static %}
+    
+    {% block content %}
+
+    <h3>Edit  TODO</h3>
+    <form class ="ui form " method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input type="submit" value ="Save" class="ui button primary">
+
+    </form>
+    
+
+    {% endblock content %}
